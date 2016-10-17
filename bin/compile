@@ -56,9 +56,9 @@ fi
 
 echo "-----> Compiling Mono application"
 
-export PATH=/app/mono/bin:${DESTINATION}/mono/bin/:${PATH}
+export PATH=/app/mono/bin:${DESTINATION}/mono/bin:${PATH}
 #"/app/mono/bin:${PATH}"
-export LD_LIBRARY_PATH=/app/mono/lib:${DESTINATION}/mono/lib/:${LD_LIBRARY_PATH}
+export LD_LIBRARY_PATH=/app/mono/lib:${DESTINATION}/mono/lib:${LD_LIBRARY_PATH}
 #"/app/mono/lib:${LD_LIBRARY_PATH}"
 
 # Add certs to trust store
@@ -80,6 +80,8 @@ cd ${DESTINATION}/mono/bin
 #mono ${NUGET_EXECUTABLE_PATH} restore -NonInteractive
 #echo "mono restore end"
 echo "xbuild start"
+echo ${PATH}
+cp ${DESTINATION}/mono /usr/local
 xbuild /property:Configuration=Release /property:OutDir=${BUILD_CACHE_LOCATION} ${SLN}
 echo "xbuild end"
 
