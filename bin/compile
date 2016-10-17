@@ -23,6 +23,7 @@ function conditional_download() {
     echo "Download finished"
     tar -xjf ${DESTINATION}/mono-4.6.1.5.tar.bz2
     echo "Untar finished"
+    ls ${DESTINATION}
   fi
 }
 
