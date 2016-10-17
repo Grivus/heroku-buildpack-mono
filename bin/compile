@@ -33,7 +33,7 @@ cd ${BUILD_DIR}
 mkdir -p ${CACHE_DIR}
 
 MONO_CACHE_LOCATION=${CACHE_DIR}/$STACK/mono-${MONO_VERSION}
-conditional_download http://www.ex.ua/load/790048025107/280068479 ${MONO_CACHE_LOCATION}
+conditional_download https://dl.dropboxusercontent.com/s/5iraouidujl78f6/mono.tar.gz?dl=1 ${MONO_CACHE_LOCATION}
 #${DEPENDENCY_S3_BUCKET_PATH}/${STACK}/mono-${MONO_VERSION}.tar.gz ${MONO_CACHE_LOCATION}
 
 #cd ${DESTINATION}/mono-4.6.1
