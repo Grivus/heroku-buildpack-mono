@@ -19,7 +19,7 @@ function conditional_download() {
     rm -rf ${DESTINATION}
     mkdir -p ${DESTINATION}
     echo "-----> Downloading ${DOWNLOAD_URL}"
-    curl ${DOWNLOAD_URL} -s | cp -r ${DESTINATION}
+    curl ${DOWNLOAD_URL} -o ${DESTINATION}/mono-4.6.1.5.tar.bz2
     #| tar -xjvf ${DESTINATION}
   fi
 }
