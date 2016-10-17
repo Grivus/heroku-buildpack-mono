@@ -21,7 +21,8 @@ function conditional_download() {
     echo "-----> Downloading ${DOWNLOAD_URL}"
     curl ${DOWNLOAD_URL} -s -o ${DESTINATION}/mono.tar.gz
     echo "Download finished"
-    tar -xjf ${DESTINATION}/mono.tar.gz -C ${DESTINATION}
+    ls ${DESTINATION}
+    tar -xvf ${DESTINATION}/mono.tar.gz -C ${DESTINATION}
     echo "Untar finished"
     ls ${DESTINATION}
   fi
