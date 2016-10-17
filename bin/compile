@@ -64,9 +64,9 @@ fi
 
 echo "-----> Compiling Mono application"
 
-export PATH="${DESTINATION}/mono-4.6.1/bin:${PATH}"
+export PATH="${DESTINATION}/mono/bin:${PATH}"
 #"/app/mono/bin:${PATH}"
-export LD_LIBRARY_PATH="${DESTINATION}/mono-4.6.1/lib:${LD_LIBRARY_PATH}"
+export LD_LIBRARY_PATH="${DESTINATION}/mono/lib:${LD_LIBRARY_PATH}"
 #"/app/mono/lib:${LD_LIBRARY_PATH}"
 
 # Add certs to trust store
