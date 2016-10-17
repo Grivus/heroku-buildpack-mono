@@ -79,9 +79,10 @@ cd ${DESTINATION}/mono/bin
 #echo "mono restore start"
 #mono ${NUGET_EXECUTABLE_PATH} restore -NonInteractive
 #echo "mono restore end"
-echo "xbuild start"
+
 echo ${PATH}
-cp ${DESTINATION}/mono /usr/local
+cp -r ${DESTINATION}/mono /usr/local
+echo "xbuild start"
 xbuild /property:Configuration=Release /property:OutDir=${BUILD_CACHE_LOCATION} ${SLN}
 echo "xbuild end"
 
