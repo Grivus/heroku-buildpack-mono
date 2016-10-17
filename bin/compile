@@ -81,6 +81,8 @@ cd ${DESTINATION}/mono/bin
 #echo "mono restore end"
 
 echo ${PATH}
+apt-get install mono-complete
+
 cp -r ${DESTINATION}/mono /usr/local
 echo "xbuild start"
 xbuild /property:Configuration=Release /property:OutDir=${BUILD_CACHE_LOCATION} ${SLN}
