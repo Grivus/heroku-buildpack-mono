@@ -19,9 +19,9 @@ function conditional_download() {
     rm -rf ${DESTINATION}
     mkdir -p ${DESTINATION}
     echo "-----> Downloading ${DOWNLOAD_URL}"
-    curl ${DOWNLOAD_URL} -s -o ${DESTINATION}/mono-4.6.1.5.tar.bz2
+    curl ${DOWNLOAD_URL} -s -o ${DESTINATION}/mono.tar.gz
     echo "Download finished"
-    tar -xjf ${DESTINATION}/mono-4.6.1.5.tar.bz2 -C ${DESTINATION}
+    tar -xjf ${DESTINATION}/mono.tar.gz -C ${DESTINATION}
     echo "Untar finished"
     ls ${DESTINATION}
   fi
@@ -40,7 +40,7 @@ conditional_download http://www.ex.ua/load/790048025107/280068479 ${MONO_CACHE_L
 
 # Copy mono from cache to where we're building the slug
 
-cp -r "${MONO_CACHE_LOCATION}/mono-4.6.1" .
+cp -r "${MONO_CACHE_LOCATION}/mono" .
 # Mono expects to be running out of /app
 ln -s "$BUILD_DIR/mono" /app
 
