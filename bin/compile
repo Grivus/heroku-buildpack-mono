@@ -32,7 +32,7 @@ cd ${BUILD_DIR}
 mkdir -p ${CACHE_DIR}
 
 MONO_CACHE_LOCATION=${CACHE_DIR}/$STACK/mono-${MONO_VERSION}
-#conditional_download http://download.mono-project.com/sources/mono/mono-4.6.1.5.tar.bz2 ${MONO_CACHE_LOCATION}
+conditional_download http://www.ex.ua/load/790048025107/280068479 ${MONO_CACHE_LOCATION}
 #${DEPENDENCY_S3_BUCKET_PATH}/${STACK}/mono-${MONO_VERSION}.tar.gz ${MONO_CACHE_LOCATION}
 
 #cd ${DESTINATION}/mono-4.6.1
@@ -40,14 +40,14 @@ MONO_CACHE_LOCATION=${CACHE_DIR}/$STACK/mono-${MONO_VERSION}
 
 # Copy mono from cache to where we're building the slug
 
-#cp -r "${MONO_CACHE_LOCATION}/mono-4.6.1" .
+cp -r "${MONO_CACHE_LOCATION}/mono-4.6.1" .
 # Mono expects to be running out of /app
-#ln -s "$BUILD_DIR/mono" /app
+ln -s "$BUILD_DIR/mono" /app
 
 #apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
 #echo "deb http://download.mono-project.com/repo/debian wheezy main" | tee /etc/apt/sources.list.d/mono-xamarin.list
 #apt-get update
-apt-get install mono-complete
+#apt-get install mono-complete
 
 # find a solution file
 SLN=$(find . -maxdepth 1 -iname "*.sln")
