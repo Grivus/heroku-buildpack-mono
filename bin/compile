@@ -73,7 +73,7 @@ fi
 BUILD_CACHE_LOCATION=${CACHE_DIR}/build/
 mkdir -p ${BUILD_CACHE_LOCATION}
 
-cd ${DESTINATION}/bin
+cd ${DESTINATION}/mono/bin
 ls 
 
 echo "mono restore start"
