@@ -40,6 +40,7 @@ conditional_download http://download.mono-project.com/sources/mono/mono-4.6.1.5.
 cp -r "${MONO_CACHE_LOCATION}/mono-4.6.1" .
 # Mono expects to be running out of /app
 ln -s "$BUILD_DIR/mono" /app
+./configure --prefix=/usr/local; make; make install
 
 # find a solution file
 SLN=$(find . -maxdepth 1 -iname "*.sln")
