@@ -19,7 +19,8 @@ function conditional_download() {
     rm -rf ${DESTINATION}
     mkdir -p ${DESTINATION}
     echo "-----> Downloading ${DOWNLOAD_URL}"
-    curl ${DOWNLOAD_URL} -s | tar -xjvf ${DESTINATION}
+    curl ${DOWNLOAD_URL} -s 
+    #| tar -xjvf ${DESTINATION}
   fi
 }
 
