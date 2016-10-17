@@ -74,11 +74,11 @@ BUILD_CACHE_LOCATION=${CACHE_DIR}/build/
 mkdir -p ${BUILD_CACHE_LOCATION}
 
 cd ${DESTINATION}/mono/bin
-ls 
+#ls 
 
-echo "mono restore start"
-mono ${NUGET_EXECUTABLE_PATH} restore -NonInteractive
-echo "mono restore end"
+#echo "mono restore start"
+#mono ${NUGET_EXECUTABLE_PATH} restore -NonInteractive
+#echo "mono restore end"
 echo "xbuild start"
 xbuild /property:Configuration=Release /property:OutDir=${BUILD_CACHE_LOCATION} ${SLN}
 echo "xbuild end"
